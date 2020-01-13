@@ -42,7 +42,35 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //nav
-const nav1 = document.querySelector('a');
-// console.log(nav1);
-nav1.textContent = 'Services';
+// const nav1 = document.querySelector('a');
+// // console.log(nav1);
+// nav1.textContent = 'Services';
+
+const links = document.querySelectorAll('nav a');
+//console.log(links);
+links[0].textContent = siteContent["nav"]["nav-item-1"];
+links[1].textContent = siteContent["nav"]["nav-item-2"];
+links[2].textContent = siteContent["nav"]["nav-item-3"];
+links[3].textContent = siteContent["nav"]["nav-item-4"];
+links[4].textContent = siteContent["nav"]["nav-item-5"];
+links[5].textContent = siteContent["nav"]["nav-item-6"];
+
+//cta
+const mainH1 = document.querySelector('.cta-text h1')
+//console.log(mainH1)
+mainH1.textContent = siteContent["cta"]["h1"];
+
+// const ctaButton = document.getElementsByTagName('button');
+// ctaButton.textContent = siteContent["cta"]["button"];
+//above didn't work
+
+const ctaButton = document.querySelector('.cta-text button');
+ctaButton.textContent = siteContent["cta"]["button"];
+
+const ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+//main content
+
+
 
