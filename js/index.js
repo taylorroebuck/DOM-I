@@ -46,6 +46,21 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 // // console.log(nav1);
 // nav1.textContent = 'Services';
 
+const newAppend = document.createElement("a");
+newAppend.href = '#';
+newAppend.textContent = 'Party With Us';
+// const newAppendItem = document.createTextNode("Dom");
+// Node.appendChild(textnode);
+// document.getElementById
+const newAppendNav = document.querySelector('nav');
+newAppendNav.appendChild(newAppend);
+
+const newPrepend = document.createElement("a");
+newPrepend.href = '#';
+newPrepend.textContent = 'Say Hello';
+const newPrependNav = document.querySelector('nav');
+newPrependNav.prepend(newPrepend);
+
 const links = document.querySelectorAll('nav a');
 //console.log(links);
 links[0].textContent = siteContent["nav"]["nav-item-1"];
@@ -55,10 +70,17 @@ links[3].textContent = siteContent["nav"]["nav-item-4"];
 links[4].textContent = siteContent["nav"]["nav-item-5"];
 links[5].textContent = siteContent["nav"]["nav-item-6"];
 
+Array.from(links).forEach((link) => {
+  link.style.color = "green"
+})
+
 //cta
 const mainH1 = document.querySelector('.cta-text h1')
 //console.log(mainH1)
 mainH1.textContent = siteContent["cta"]["h1"];
+
+//stretch goal
+document.querySelector('.cta-text h1').style.color = "blue";
 
 // const ctaButton = document.getElementsByTagName('button');
 // ctaButton.textContent = siteContent["cta"]["button"];
